@@ -1,4 +1,4 @@
-name: Testing a name with input ${{ inputs.name }}
+name: Testing a name with input
 
 on:
   workflow_dispatch:
@@ -9,6 +9,7 @@ on:
 
 jobs:
   echo:
+    name: Echoing stuff for ${{ inputs.name }}
     runs-on: ubuntu-latest
     steps:
       - name: echo
